@@ -1,0 +1,21 @@
+---
+layout: base
+---
+  <main class="container">
+    <div class="columns">
+      <div class="left-column">
+        {% include "_galleryPreview.njk" %}
+        {% include "_artHighlight.njk" %}
+      </div>
+      <div class="right-column">
+        <div class="box">
+          <div class="box-header container"><h2>Small About</h2></div>
+          <div class="box-main container">
+            {{ content | safe }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="app-footer" class="container"></footer>

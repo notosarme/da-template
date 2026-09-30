@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  },
+  "name": "da-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

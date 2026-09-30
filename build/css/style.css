@@ -1,0 +1,91 @@
+:root {
+  --green-1: #eaf1e9;
+  --green-1b: #DDE4DA;
+  --green-2: #d4e1d0;
+  --green-3: #b5c9b0;
+  --green-4: #475c4d;
+  --green-5: #323836;
+  --white: #fcfff8;
+  --black: #1a1b1b;
+  --blue: #2e7ba9;
+}
+@font-face {
+  font-family: ZinSans;
+  src: url("/assets/CarnokyType-ZinSansDemo.otf");
+}
+header, h1, h2, nav { font-family: ZinSans; }
+.center {text-align: center;}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: var(--green-2);
+  color: var(--black);
+}
+body a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.container {
+  padding: 0.5rem;
+}
+.box {
+  border: 1px solid var(--green-4);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.box-header {
+  background-color: var(--green-1);
+  border-bottom: 1px solid var(--green-4);
+}
+.box-main {
+  background-color: var(--green-1b);
+}
+h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+.columns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.left-column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+}
+.right-column {
+  flex: 1;
+}
+
+/* HEADER START */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--green-3);
+  border-bottom: 1px solid var(--green-4);
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 2rem;
+}
+nav a {
+  color: var(--black);
+}
+/* HEADER END */
