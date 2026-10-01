@@ -1,3 +1,7 @@
+---
+headerTitle: DeviantArt Template
+title: Untitled
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,7 @@
 </head>
 <body>
  <header id="app-header" class="container">
-  <h1>{{ title }}</h1>
+  <h1>{{ headerTitle }}</h1>
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
@@ -18,8 +22,8 @@
         </ul>
     </nav>
   </header>
-  <main>
-    {{ content | safe }}
-  </main>
+
+  {{ content | safe }}
+
 </body>
 </html>

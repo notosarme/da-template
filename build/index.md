@@ -1,5 +1,5 @@
 ---
-title: DeviantArt Template
+title: Home
 layout: home
 ---
 ☆ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum mollis sodales. Fusce venenatis auctor neque, eget rhoncus justo aliquet et. Praesent eget luctus nulla, id iaculis urna. Nulla vel vulputate ipsum, in sagittis massa. Sed ut purus vitae metus facilisis faucibus in eu sapien. Etiam viverra ligula massa, at ultrices mauris sagittis id. In dignissim ex nec augue hendrerit, at dignissim sem consectetur. Proin odio ex, viverra ut metus nec, ultricies feugiat ipsum. Etiam lacus eros, faucibus in est vel, hendrerit sodales magna.

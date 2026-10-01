@@ -1,0 +1,24 @@
+---
+layout: base
+---
+<div id="gallery">
+  <aside class="gallery-sidebar container">
+  <h2>Gallery Folders</h2>
+  <ul class="category-list">
+    {% for category in collections.categories %}
+      <li>
+        <a href="{{ category.url }}">
+          <div class="category-card">{{ category.name }}</div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  </aside>
+  
+  <main class="container">
+    <div class="gallery">
+      {{ content | safe }}
+    </div>
+  </main>
+</div>
