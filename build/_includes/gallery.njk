@@ -4,16 +4,7 @@ layout: base
 <div id="gallery">
   <aside class="gallery-sidebar container">
   <h2>Gallery Folders</h2>
-  <ul class="category-list">
-    {% for category in collections.categories %}
-      <li>
-        <a href="{{ category.url }}">
-          <div class="category-card">{{ category.name }}</div>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-  
+  {% include "_galleryCategories.njk" %}
   </aside>
   
   <main class="container">

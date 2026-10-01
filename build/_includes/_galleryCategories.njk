@@ -1,0 +1,12 @@
+<ul class="category-list">
+  {% for category in collections.categories %}
+    <li>
+      <a href="{{ category.url }}">
+        <div class="category-card">
+          <img src="https://picsum.photos/325/225">
+          <div class="tag">{{ category.name | title }}</div>
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
