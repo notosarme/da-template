@@ -50,11 +50,35 @@ html, body {
 
 body a { color: var(--blue); text-decoration: none; }
 header, h1, h2, nav { font-family: ZinSans; }
-h1 {pointer-events: none;}
 h2 { font-size: 1rem; margin: 0; }
 .container { padding: 0.5rem; }
 .center {text-align: center;}
 img { max-width: 100%; }
+
+.button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E6EAE5), to(#D7DED5));
+  margin: 8px 0;
+  border: 1px solid #93A98F;
+  border-top-color: #adbda9;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  min-width: 85px;
+  color: var(--black);
+  cursor: pointer;
+  font-size: 11px;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-weight: bold;
+  width: fit-content;
+  align-self: center;
+}
+.button:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#C9D3C8), to(#E0E4E0));
+  border-top-color: #93A98F;
+  border-bottom-color: #adbda9;
+}
 /* END ALL */
 
 
@@ -63,9 +87,11 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between; /* Use "space-between" for opposite ends, "start" for both being on the left */
   gap: 3rem;
   background-color: var(--green-3);
   border-bottom: 1px solid var(--green-4);
+  padding: 0.5rem 1rem;
 }
 h1 {
   font-size: 1.75rem;
@@ -79,9 +105,27 @@ nav ul {
   list-style: none;
   gap: 2rem;
 }
-nav a {
+nav li { display: flex; align-items: center;}
+.nav-link {
   color: var(--black);
+  font-size: 9.5pt;
 }
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.title { display: flex; flex-direction: row; gap: 1rem;}
+.title .avatar { 
+  height: 50px; 
+  width: 50px;
+  background: url('/assets/avatar.jpg');
+}
+
+header a {color: var(--black);}
+.icon-gallery, .icon-info, .icon-journal { width: 20px; height: 20px; display: inline-block; margin-right: 5px;}
+.icon-info {background: url(/assets/icon-info.gif);}
+.icon-gallery {background: url(/assets/icon-gallery.gif);}
+.icon-journal {background: url(/assets/icon-journal.gif);}
 /* HEADER END */
 
 
@@ -114,7 +158,7 @@ nav a {
   gap: 1rem;
 }
 .art-highlight { text-align: center; }
-.art-highlight img { max-width: 90%; }
+.art-highlight img { max-width: 85%; }
 /* END BOXES */
 
 /* GALLERY START */
@@ -245,7 +289,7 @@ nav a {
 }
 .artwork-info h2 {
   display: inline-block;
-  font-size: 16pt;
+  font-size: 15pt;
 } 
 .artwork-info .tags {
   margin-right: 12px;

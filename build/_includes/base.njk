@@ -13,16 +13,17 @@ id: home
 </head>
 <body id="{{ id }}">
   <div class="grid">
-  <header class="header container">
+  <header class="header">
     <div class="title">
-      <span class="avatar"></span><h1>{{ headerTitle }}</h1>
+      <span class="avatar"></span> {# Remove this if you don't want an icon #}
+      <h1><a href="/">{{ headerTitle }}</a></h1>
     </div>
       <nav>
           <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/posts">Posts</a></li>
-              <li><a href="/about">About</a></li>
+            {# Remove the span classes to remove the icons, or replace the assets for custom ones #}
+              <li><span class="icon-info"></span><a class="nav-link" href="/">Home</a></li>
+              <li><span class="icon-gallery"></span><a class="nav-link" href="/gallery">Gallery</a></li>
+              <li><span class="icon-journal"></span><a class="nav-link" href="/posts">Journal</a></li>
           </ul>
       </nav>
     </header>
