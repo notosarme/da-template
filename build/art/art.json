@@ -1,5 +1,5 @@
 {
   "layout": "artwork",
   "tags": "artwork",
-  "permalink": "/gallery/{{ page.fileSlug }}/"
+  "permalink": "/art/{{ page.fileSlug }}/"
 }

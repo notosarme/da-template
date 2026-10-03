@@ -4,6 +4,6 @@ layout: base
 <main>
   <img src="{{ url }}">
   <h2>{{ title }}</h2>
-  <p>{{ date }}</p>
+  <p>Published: {{ date | niceDate }}</p>
   {{ content | safe }}
 </main>
