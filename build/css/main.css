@@ -24,6 +24,7 @@ html, body {
   background-color: var(--green-2);
   color: var(--black);
   font-family: Verdana, sans-serif;
+  font-size: 9pt;
 }
 
 .grid {
@@ -52,6 +53,7 @@ header, h1, h2, nav { font-family: ZinSans; }
 h2 { font-size: 1rem; margin: 0; }
 .container { padding: 0.5rem; }
 .center {text-align: center;}
+img { max-width: 100%; }
 /* END ALL */
 
 
@@ -94,9 +96,24 @@ nav a {
   background-color: var(--green-1);
   border-bottom: 1px solid var(--green-4);
 }
+.box h2 {
+  font-size: 13.5pt; margin: 0; color: var(--green-5);
+}
 .box-main {
   background-color: var(--green-1b);
+  padding: 1rem;
+  font-size: 10pt;
 }
+
+#newest-art {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.art-highlight { text-align: center; }
+.art-highlight img { max-width: 90%; }
 /* END BOXES */
 
 /* GALLERY START */
@@ -129,7 +146,6 @@ nav a {
     text-align: left;
     background-color: #080808;
     color: var(--white);
-    font-size: smaller;
     margin-bottom: 2rem;
     overflow: hidden;
     box-shadow: 0 0 3px var(--black);
@@ -149,7 +165,6 @@ nav a {
     background: #080808;
     opacity: 0.75;
     z-index: 19;
-    font-size: smaller;
   }
   /* GALLERY SIDEBAR END */
 
@@ -166,7 +181,6 @@ nav a {
     text-decoration: none;
     color: var(--black);
     text-align: center;
-    font-size: smaller;
   }
   .gallery-card a:hover {text-decoration: underline;}
 
@@ -193,19 +207,20 @@ nav a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 9pt;
   }
   /* GALLERY CARDS END */
 
 /* GALLERY END */
 
 /* ART PAGE */
-#art .grid {
+/* #art .grid {
   grid-template-columns: auto;
-}
+} */
 
 .artwork {
-  font-size: smaller;
   max-width: 1239px;
+  /* margin: auto; */
 }
 .artwork-img {
   display: block;

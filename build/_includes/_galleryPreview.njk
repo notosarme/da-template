@@ -1,6 +1,20 @@
+
 <div class="box">
   <div class="box-header container"><h2>Newest Art</h2></div>
-  <div class="box-main container">
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit ipsa ipsam molestias, quisquam, labore enim accusantium maxime rerum consectetur excepturi, ut incidunt? Non magnam laborum ullam impedit aperiam vitae perferendis?</p>
+  <div id="newest-art" class="box-main container">
+    {% for art in collections.artwork | reverse %}
+      {% if loop.index0 < 4 %}
+       <div class="gallery-card">
+          <a href="{{ art.url }}">
+            <figure>
+                <img src="{{ art.data.url }}">
+                <figcaption>{{ art.data.title }}</figcaption>
+            </figure>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
+
+{# Change the loop.index number to change how many new artworks are displayed #}
