@@ -1,15 +1,14 @@
 ---
 layout: base
+id: gallery
 ---
-<div id="gallery">
-  <aside class="gallery-sidebar container">
-  <h2>Gallery Folders</h2>
-  {% include "_galleryCategories.njk" %}
+  <aside class="left flex-column container gallery-sidebar">
+    <h2>Gallery Folders</h2>
+    {% include "_galleryCategories.njk" %}
   </aside>
   
-  <main class="container">
+  <main class="right container">
     <div class="gallery">
       {{ content | safe }}
     </div>
   </main>
-</div>
