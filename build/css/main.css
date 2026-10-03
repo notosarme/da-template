@@ -198,3 +198,33 @@ nav a {
 
 /* GALLERY END */
 
+/* ART PAGE */
+#art .grid {
+  grid-template-columns: auto;
+}
+
+.artwork {
+  font-size: smaller;
+  max-width: 1239px;
+}
+.artwork-img {
+  display: block;
+  margin: auto;
+  width: fit-content;
+}
+.artwork-img img {
+  /* Main art display max size: change to whatever you want */
+  max-width: 700px; max-height: 600px; 
+}
+.artwork-info h2 {
+  display: inline-block;
+  font-size: 16pt;
+} 
+.artwork-info .tags {
+  margin-right: 12px;
+}
+.artwork-info .date {
+  color: #97a2a0;
+}
+/* ART PAGE END */
+

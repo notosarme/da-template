@@ -1,9 +1,23 @@
 ---
 layout: base
+id: art
 ---
-<main>
-  <img src="{{ url }}">
-  <h2>{{ title }}</h2>
-  <p>Published: {{ date | niceDate }}</p>
+<main class="container artwork">
+  <div class="artwork-img">
+    <a href="{{ url }}"><img src="{{ url }}"></a>
+  </div>
+  <div class="artwork-info">
+    <h2>{{ title }}</h2>
+    <p>
+      <span class="tags">
+        {% set displayTags = tags | reject("equalto", "artwork") %}
+        {% for t in displayTags %}
+          <a href="/gallery/{{ t | slugify }}">{{ t | title }}</a>{% if not loop.last %} / {% endif %}
+        {% endfor %}
+      </span>
+      <span class="date">Published: {{ date | niceDate }}</span>
+    </p>
+  </div>
+  <hr>
   {{ content | safe }}
 </main>
