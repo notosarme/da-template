@@ -1,22 +1,38 @@
 ---
-layout: gallery
+layout: base
+id: art
 ---
 <div class="container artwork">
   <div class="artwork-img">
-    <a href="{{ url }}"><img src="{{ url }}"></a>
+    <img src="{{ url }}">
   </div>
-  <div class="artwork-info">
-    <h2>{{ title }}</h2>
-    <p>
-      <span class="tags">
+
+  <div class="box artwork-info">
+    <div class="info-left">
+      <h2>{{ title }}</h2>
+
+      {# Reorganize the details sidebar here! #}
+      
+      <div class="date">Published: {{ date | niceDate }}</div>
+
+      <div class="tags">
+        Tags: 
         {% set displayTags = tags | reject("equalto", "artwork") %}
         {% for t in displayTags %}
-          <a href="/gallery/{{ t | slugify }}">{{ t | title }}</a>{% if not loop.last %} / {% endif %}
+          #<a href="/gallery/{{ t | slugify }}">{{ t | title }}</a>
         {% endfor %}
-      </span>
-      <span class="date">Published: {{ date | niceDate }}</span>
-    </p>
+      </div>
+
+      <div class="download">
+        <span class="dl-icon"></span> <a href="{{ url }}">Full View</a>
+      </div>
+
+      {# End #}
+
+    </div>
+    <div class="info-right">
+      <strong>Artist Comments:</strong>
+      {{ content | safe }}
+    </div>
   </div>
-  <hr>
-  {{ content | safe }}
 </div>
