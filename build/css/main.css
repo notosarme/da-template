@@ -130,7 +130,6 @@ nav a {
 
   /* GALLERY SIDEBAR */
   .gallery-sidebar {
-    height: 100%;
     border-right: 1px solid var(--green-5);
     background-color: var(--green-1b);
   }
