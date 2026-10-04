@@ -1,0 +1,14 @@
+---
+layout: base
+id: gallery
+---
+  <aside class="left flex-column container">
+    <a class="button" href="/gallery/">🢐 Main Gallery</a>
+  </aside>
+  
+  <main class="right container">
+    <h2 class="subgallery-title">{{ category.name | title}}</h2>
+    <div class="gallery">
+      {{ content | safe }}
+    </div>
+  </main>

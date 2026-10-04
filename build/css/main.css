@@ -166,6 +166,8 @@ header a {color: var(--black);}
   grid-template-columns: 180px 1fr;
 }
 
+.subgallery-title { font-size: 15pt; margin: 8px 0; padding: 4px 0; }
+
 .gallery {
   padding: 0.5rem;
   display: flex;

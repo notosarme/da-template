@@ -17,7 +17,8 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByTag("artwork");
   });
 
- eleventyConfig.addCollection("categories", function (collectionApi) {
+
+eleventyConfig.addCollection("categories", function (collectionApi) {
   const categories = new Map();
 
   const artworks = collectionApi
@@ -35,14 +36,19 @@ module.exports = function (eleventyConfig) {
           name: tag,
           url: `/gallery/${tag}/`,
           image: item.data.url,
+          artworks: [],
         });
       }
+
+      categories.get(tag).artworks.push(item);
     }
   }
 
   return [...categories.values()]
     .sort((a, b) => a.name.localeCompare(b.name));
 });
+
+
 
 
 

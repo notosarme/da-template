@@ -1,0 +1,21 @@
+---
+title: Gallery
+layout: subgallery
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+
+permalink: "{{ category.url }}"
+---
+
+  {% for art in category.artworks %}  
+    <div class="gallery-card">
+    <a href="{{ art.url }}">
+      <figure>
+          <img src="{{ art.data.url }}">
+          <figcaption>{{ art.data.title }}</figcaption>
+      </figure>
+    </a>
+  </div>
+{% endfor %}
