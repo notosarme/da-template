@@ -122,10 +122,11 @@ nav li { display: flex; align-items: center;}
 }
 
 header a {color: var(--black);}
-.icon-gallery, .icon-info, .icon-journal { width: 20px; height: 20px; display: inline-block; margin-right: 5px;}
+.icon-gallery, .icon-info, .icon-journal, .icon-scraps { width: 20px; height: 20px; display: inline-block; margin-right: 5px;}
 .icon-info {background: url(/assets/icon-info.gif);}
 .icon-gallery {background: url(/assets/icon-gallery.gif);}
 .icon-journal {background: url(/assets/icon-journal.gif);}
+.icon-scraps {background: url(/assets/icon-scraps.gif);}
 /* HEADER END */
 
 
@@ -250,6 +251,7 @@ header a {color: var(--black);}
   }
 
   .gallery-card figcaption {
+    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

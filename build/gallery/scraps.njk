@@ -1,0 +1,14 @@
+---
+title: Scraps
+layout: gallery
+---
+{% for art in collections.scraps | reverse %}
+  <div class="gallery-card">
+    <a href="{{ art.url }}">
+      <figure>
+          <img src="{{ art.data.url }}">
+          <figcaption>{{ art.data.title }}</figcaption>
+      </figure>
+    </a>
+  </div>
+{% endfor %}
