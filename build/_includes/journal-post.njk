@@ -1,0 +1,26 @@
+---
+layout: journal
+---
+<div class="box">
+  <div class="box-header container">
+    <h2><span class="icon-journal"></span>{{ title }}</h2>
+    <div class="journal-date">Journal Entry: {{ date | niceDate }}</div>
+  </div>
+  <div class="box-main container">
+    {{ content | safe }}
+  </div>
+  <div class="journal-list">
+      <ul>
+        {% if mood %}<li><strong>Mood:</strong> {{ mood }} </li>{% endif %}
+        {% if listeningTo %}<li><strong>Listening to:</strong> {{ listeningTo }} </li>{% endif %}
+        {% if reading %}<li><strong>Reading:</strong> {{ reading }} </li>{% endif %}
+        {% if playing %}<li><strong>Playing:</strong> {{ playing }} </li>{% endif %}
+        {% if eating %}<li><strong>Eating:</strong> {{ eating }} </li>{% endif %}
+        {% if drinking %}<li><strong>Drinking:</strong> {{ drinking }} </li>{% endif %}
+      </ul>
+  </div>
+</div>
+
+<div>
+  <a class="button" href="/journal/">🢐 Journal Home</a>
+</div>
