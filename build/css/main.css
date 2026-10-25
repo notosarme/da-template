@@ -319,3 +319,14 @@ header a {color: var(--black);}
 }
 /* ART PAGE END */
 
+/* JOURNAL START */
+.read-more a::before { content: "[ "; }
+.read-more a::after { content: " ]"; }
+
+#journal .grid {
+  grid-template-columns: 2fr 1fr;
+}
+
+
+/* JOURNAL END */
+

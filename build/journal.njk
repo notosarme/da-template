@@ -1,0 +1,15 @@
+---
+title: Journal
+layout: journal
+---
+{% for post in collections.journal | reverse %}
+    <div class="box">
+      <div class="box-header container">
+        <h2><span class="icon-journal"></span><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <div>Journal Entry: {{ post.data.date | niceDate }}</div>
+      </div>
+      <div class="box-main container">
+        {{ post.templateContent | excerpt(post.url) | safe }}
+      </div>
+    </div>
+  {% endfor %}
