@@ -60,10 +60,12 @@ eleventyConfig.addFilter("excerpt", (content, url) => {
   let truncated = false;
 
   if (imgMatch) {
+    // cut off if it hits an image
     end = Math.min(end, imgMatch.index);
     truncated = true;
-  } else if (paragraphBreaks.length >= 2) {
-    end = paragraphBreaks[1].index + paragraphBreaks[1][0].length;
+  } else if (paragraphBreaks.length >= 3) {
+    // cut off after 3 paragraphs
+    end = paragraphBreaks[2].index + paragraphBreaks[2][0].length;
     truncated = true;
   }
 

@@ -6,10 +6,21 @@ layout: journal
     <div class="box">
       <div class="box-header container">
         <h2><span class="icon-journal"></span><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-        <div>Journal Entry: {{ post.data.date | niceDate }}</div>
+        <div class="journal-date">Journal Entry: {{ post.data.date | niceDate }}</div>
       </div>
       <div class="box-main container">
         {{ post.templateContent | excerpt(post.url) | safe }}
+
+        </div>
+        <div class="journal-list">
+          <ul>
+            {% if post.data.mood %}<li><strong>Mood:</strong> {{ post.data.mood }} </li>{% endif %}
+            {% if post.data.listeningTo %}<li><strong>Listening to:</strong> {{ post.data.listeningTo }} </li>{% endif %}
+            {% if post.data.reading %}<li><strong>Reading:</strong> {{ post.data.reading }} </li>{% endif %}
+            {% if post.data.playing %}<li><strong>Playing:</strong> {{ post.data.playing }} </li>{% endif %}
+            {% if post.data.eating %}<li><strong>Eating:</strong> {{ post.data.eating }} </li>{% endif %}
+            {% if post.data.drinking %}<li><strong>Drinking:</strong> {{ post.data.drinking }} </li>{% endif %}
+          </ul>
       </div>
     </div>
   {% endfor %}

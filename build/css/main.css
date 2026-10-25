@@ -322,11 +322,49 @@ header a {color: var(--black);}
 /* JOURNAL START */
 .read-more a::before { content: "[ "; }
 .read-more a::after { content: " ]"; }
+.read-more { font-weight: bolder; }
+
+.journal-date {
+  margin-top: .25rem; font-size: 8.75pt;
+}
 
 #journal .grid {
   grid-template-columns: 2fr 1fr;
 }
 
+#journal h2 a {
+  color: var(--green-5);
+}
+
+.journal-list {
+  padding: 0; margin: 0; font-size: 8.75pt;
+}
+
+.journal-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.journal-list li {
+  padding: .5rem .75rem;
+}
+
+.journal-list li:nth-child(odd) {
+  background: var(--green-1);
+}
+.journal-list li:nth-child(even) {
+  background: var(--green-1b);
+}
+
+.journal-list .side {
+  float: right;
+  padding-left: 1rem;
+}
+
+.journal-list a {
+  text-decoration: underline;
+}
 
 /* JOURNAL END */
 
