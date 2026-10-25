@@ -32,9 +32,10 @@ module.exports = function (eleventyConfig) {
         }
 
         if (!categories.has(tag)) {
+          let tagUrl = tag.replace(/\s+/g, '-').toLowerCase();
           categories.set(tag, {
             name: tag,
-            url: `/gallery/${tag}/`,
+            url: `${tagUrl}`,
             image: item.data.url,
             artworks: [],
           });
