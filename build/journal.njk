@@ -9,6 +9,7 @@ layout: journal
         <div class="journal-date">Journal Entry: {{ post.data.date | niceDate }}</div>
       </div>
       <div class="box-main container">
+        {# If you don't want read more cut-offs, remove the excerpt part #}
         {{ post.templateContent | excerpt(post.url) | safe }}
 
         </div>
